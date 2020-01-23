@@ -1,0 +1,1 @@
+X=MsgBox("Ransomware attack stopped successfuly and all of your files have been rolled back. Note that some readme files may still exist",0+64,"FileDefender") 
