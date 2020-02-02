@@ -6,6 +6,6 @@ start "FileDefender Self Protection" "selfProtection.vbs"
 echo.>>filedefender.log
 echo.>>filedefender.log
 echo %time% - %date% : Launch Log>>filedefender.log
-call "FileDefender.exe" >> filedefender.log
+call "FileDefender.exe"
 
 exit

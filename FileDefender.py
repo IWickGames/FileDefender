@@ -1,8 +1,10 @@
 import os
 import sys
 import time
+import urllib.request
 
 import monitorReg
+import sendComputerID
 
 #Remove Temp Files(If program was killed before there deletion)
 def cleanUp():
@@ -21,7 +23,7 @@ waitTimer = 10
 
 backUpRerollEnable = True #You can set this to False if you just want the program to take the computer offline when an attack is detected
 
-version = '1.2.1.4 Alpha'
+version = '1.2.1.5 Alpha'
 monitorDirs = ['%userprofile%\Desktop','%userprofile%\Documents','%userprofile%\Music','%userprofile%\Pictures','%userprofile%\Videos']
 
 #Get Extenchions
@@ -189,6 +191,11 @@ while True:
         else:
             print("Registry Check --- Failed")
             print("Recovering Registry...")
+
+            #Write to log
+            with open("filedefender.log", "a") as f:
+                f.write("Registry Check Failed\n")
+
             monitorReg.recoverReg()
 
         createdFiles = []
@@ -244,6 +251,9 @@ while True:
             else:
                 #Change count did not reach the limit
                 indexedFiles = createdFiles
+    except Exception as err:
+        sendComputerID.sendReport(err)
+        pass
     except KeyboardInterrupt:
         print("\n\n\n\nStopping protection...")
         cleanUp()
