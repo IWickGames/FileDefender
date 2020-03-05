@@ -19,6 +19,6 @@ A update to FileDefender is coming out soon on first the Discord then GitHub as 
 4.) Many stabibility improvements
 5.) Mutch more!
 
-Make sure to watch this GitHub or join the Discord as I will push an update when this comes out. Also you can join the Discord if you want to help early testing and you know what your doing(if you don't know how to test ransomware safly please don't do it).
+Make sure to watch this GitHub or join the Discord as I will push an update when this comes out. Also you can join the Discord if you want to help early testing and you know what your doing(if you don't know how to test ransomware please don't do it).
 
 Thanks everyone for the support on this project. Im also thinking of making a donation link or a payed version to help support development and allow me to keep updating this GitHub.
